@@ -5,7 +5,7 @@ function App() {
   const [isOn, setIsOn] = useState(false);
 
   const toggleBulb = () => {
-    setIsOn(!isOn);
+    setIsOn(!isON);
   };
 
   return (
