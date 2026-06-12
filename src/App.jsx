@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import "./App.css";
 
+const BULB_ON_IMAGE_URL = "https://i.postimg.cc/6QyTynzr/bulb-on.png";
+const BULB_OFF_IMAGE_URL = "https://i.postimg.cc/KjK1wL3c/bulb-off.png";
+
 function App() {
   const [isOn, setIsOn] = useState(false);
 
@@ -18,11 +21,7 @@ function App() {
       <section>
         <img
           className={isOn ? "bulb glow" : "bulb"}
-          src={
-            isOn
-              ? "https://i.postimg.cc/6QyTynzr/bulb-on.png"
-              : "https://i.postimg.cc/KjK1wL3c/bulb-off.png"
-          }
+          src={isOn ? BULB_ON_IMAGE_URL : BULB_OFF_IMAGE_URL}
           alt="bulb"
           width="200"
         />
