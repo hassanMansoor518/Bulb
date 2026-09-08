@@ -31,7 +31,7 @@ function App() {
           width="200"
           style={{
             filter: isOn
-              ? "drop-shadow(0 0 35px #f30000ff)"
+              ? "drop-shadow(0 0 35px #74db20ff)"
               : "none",
           }}
         />
