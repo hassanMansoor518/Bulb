@@ -12,10 +12,15 @@ function App() {
   };
 
   return (
-    <div className={`App ${isOn ? "bg-on" : "bg-off"}`}>
+    <div
+      className={`App ${isOn ? "bg-on" : "bg-off"}`}
+      style={{
+        backgroundColor: isOn ? "yellow" : undefined,
+      }}
+    >
       <div className="panel">
       <header className="header">
-        <h1>💡 Bulb is {isOn ? "ON" : "OFF"}</h1>
+        <h1>🟡 Bulb is {isOn ? "ON" : "OFF"}</h1>
       </header>
 
       <section>
@@ -24,6 +29,11 @@ function App() {
           src={isOn ? BULB_ON_IMAGE_URL : BULB_OFF_IMAGE_URL}
           alt="bulb"
           width="200"
+          style={{
+            filter: isOn
+              ? "drop-shadow(0 0 35px #f30000ff)"
+              : "none",
+          }}
         />
 
         <div className="toggle_container">
